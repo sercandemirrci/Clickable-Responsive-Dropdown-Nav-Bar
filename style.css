@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(37, 37, 37);
+}
+
+
+
+/*HEADER*/
+
+.header {
+    background-color: black;
+}
+
+.header-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+
+
+
+/*LOGO*/
+
+.header-wrapper .logo{
+    font-size: 30px;    
+    padding: 0px;
+}
+
+.header-wrapper .logo a{
+    display: block;
+    color: #cccccc;
+    padding: 14px 0px;
+}
+
+.header-wrapper .logo a:hover{
+    color: #fff;
+    text-shadow: 0px 5px 10px #fff;
+    transition: .3s;
+}
+
+
+
+/*NAV LINKS*/
+
+.header-wrapper .nav-bar {
+    display: flex;
+    gap: 10px;
+}
+
+.header-wrapper .nav-bar a{
+    padding: 20px 15px;
+    color: #ccc;
+}
+
+.header-wrapper .nav-bar a:hover{
+    background-color: rgb(24, 24, 24);
+    border-radius: 20px;
+    color: #fff;
+    text-shadow: 0px 5px 10px #fff;
+    transition: .3s;
+}
+
+
+
+/*PROFILE BUTTON*/
+
+.header-wrapper .profile{
+    border: 1px solid #414141;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.header-wrapper .profile i{
+    color: #ccc;
+    text-shadow: 0px 0px 20px #666666;
+    padding: 15px;
+}
+
+.header-wrapper .profile:hover{
+    background-color: rgb(24, 24, 24);
+    border-color: #fff;
+    transition: .3s;
+}
+
+.header-wrapper .profile i:hover{
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff;
+    transition: .3s;
+}
+
+
+
+
+/*TOOGLE*/
+
+.header-wrapper .toogle{
+    position: relative;
+    color: #cccccc;
+    cursor: pointer;
+    font-size: 24px;
+    text-shadow: 0px 0px 5px #666666;
+    padding: 10px 0px;
+    display: none;
+}
+
+.header-wrapper .toogle:hover{
+    color: #fff;
+    text-overflow: 0px 0px 10px #fff;
+    transition: .3s;
+}
+
+
+
+
+
+/*PROFILE DROPDOWN*/
+
+.header .profile-dropdown{
+    border: none;
+    position: absolute;
+    width: 130px;
+    border: 1px solid black;
+    top: 79px;
+    font-size: 14px;
+    text-align: center;
+    background-color: rgb(20, 20, 20);
+    border-radius: 0px 0px 20px 20px;
+    padding: 10px 0px 10px 0px;
+    display: none;
+    z-index: 999;
+}
+
+.header .profile-dropdown .profile-dropdown-content a{
+    display: inline-block;
+    color: #ccc;
+    padding: 5px 10px;
+}
+
+.header .profile-dropdown .profile-dropdown-content i{
+    padding-right: 0px;
+}
+
+.header .profile-dropdown .profile-dropdown-content a:hover{
+    background-color: #333333;
+    border-radius: 20px;
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff;
+    transition: .3s;
+}
+
+.header .profile-dropdown .profile-dropdown-content a:hover i {
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff;
+    transition: .3s;
+}
+
+
+
+
+/*MENU DROPDOWN*/
+.menu-dropdown-container{
+    display: none; 
+}
+.menu-dropdown{
+    position: absolute;
+    background-color: rgb(20, 20, 20);
+    right: 0;
+    left: -320px;
+    top: 64px;
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 998;
+}
+
+.menu-dropdown a{
+    display: block;
+    font-size: 16px;
+    color: #ccc;
+    padding: 14px 100%;
+}
+
+.menu-dropdown a:hover{
+    background-color: rgb(24, 24, 24);
+    border-radius: 20px;
+    color: #fff;
+    text-shadow: 0px 5px 10px #fff;
+    text-decoration: underline;
+    transition: .3s;
+}
+
+
+
+
+/*EMPTY-AREA*/
+
+#empty-area {
+    height: calc(100vh - 85px);
+    width: 100%;
+    display: none;
+}
+
+
+
+
+/*RESPONSIVE*/
+
+@media screen and (max-width:700px) {
+    .header-wrapper {
+        justify-content: space-between;
+        margin: 0px 30px;
+    }
+    .header-wrapper .nav-bar,
+    .header-wrapper .profile {
+        display: none;
+    }
+    .header-wrapper .toogle{
+        display: block;
+    }
+}
